@@ -32,36 +32,40 @@ image_dir: assets/images
 sidebar:
     menu:
         home:
-            title: global.home
-            url: /
+            title: 首页
+            url: /home
             icon: home
         categories:
-            title: global.categories
+            title: 分类
             url: /all-categories
             icon: bookmark
-        # tags:
-        #     title: global.tags
-        #     url: /all-tags
-        #     icon: tags
-        # archives:
-        #     title: global.archives
-        #     url: /all-archives
-        #     icon: archive
-        # search:
-        #     title: global.search
-        #     url: /#search
-        #     icon: search
-        #     # `open-algolia-search` classes are used to open algolia search modal
-        #     class: open-algolia-search
-        # about:
-        #     title: global.about
-        #     url: /#about
-        #     icon: question
+        tags:
+            title: 标签
+            url: /all-tags
+            icon: tags
+        archives:
+            title: 归档
+            url: /all-archives
+            icon: archive
+        search:
+            title: 搜索
+            url: /#search
+            icon: search
+            # `open-algolia-search` classes are used to open algolia search modal
+            class: open-algolia-search
+        about:
+            title: 关于
+            url: /#about
+            icon: question
     author_links:
         github:
-            title: global.github
+            title: GitHub
             url: https://github.com/jingyawang/
             icon: github
+        mail:
+            title: 邮箱
+            url: jingya_wang@yeah.net
+            icon: envelope-o
         # stack_overflow:
         #     title: global.stack_overflow
         #     url: http://stackoverflow.com/users
@@ -82,17 +86,16 @@ sidebar:
         #     title: global.linkedin
         #     url: https://www.linkedin.com/profile/
         #     icon: linkedin
-        # mail:
-        #     title: global.mail
-        #     url: jingya_wang@yeah.net
-        #     icon: envelope-o
     rss:
         rss:
             title: global.rss
             url: /atom.xml
             icon: rss
 
-
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
 # Header configuration
 # The link at the right of the header is customizable
 # You can add a link (as an icon) at the right of the header instead of the author's gravatar image or author's picture.
@@ -104,9 +107,9 @@ sidebar:
 #     class: open-algolia-search
 header:
     right_link:
-        url: /#about
-        icon:
-        class:
+        url: /#search
+        icon: search
+        class: st-search-show-outputs
 
 
 # Author
@@ -114,19 +117,20 @@ header:
 author:
     email: jingya_wang@yeah.net
     location: 上海浦东
+    picture: /latte.jpg
     # Your profile picture located in folder `source/_images/` (development)
     # or in `source/assets/images/` (production)
     # or you can use an external url
     # Overwritten by your gravatar image if `gravatar_email` is filled
-    picture:
+
     # Your Twitter username without the @. E.g : `tranquilpeak`
-    twitter:
+    # twitter:
     # Your personal google plus profile id, not your blog or business page id.
     # E.g : `+JohnDoe` or `123812884128439`
-    google_plus:
+    # google_plus:
     # Your businnes google plus profile id. If not provided, personal will be used instead.
     # E.g : `+Tranquilpeak` or `123812884128439`
-    google_plus_business:
+    # google_plus_business:
 
 
 # Customization
@@ -142,7 +146,7 @@ author:
 # large sidebar is swiped on all lower screens
 # 5: Display header bar on all screens and large sidebar is swiped on large screen
 # 6: Display header bar on all screens and medium sidebar is swiped
-sidebar_behavior: 1
+sidebar_behavior: 2
 # Hide sidebar on all article page to let article take full width to improve reading, and
 # enjoy wide images and cover images. (true: enable, false: disable)
 clear_reading: true
